@@ -1,0 +1,236 @@
+.body{
+    font-family: 'Manrope',sans-serif;
+}
+.container
+{
+    font-family: 'Manrope',
+    sans-serif;
+    position: relative;
+    height:100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: none;
+}
+.right {
+    position: relative;
+    background-color: #0000ff;
+    color: white;
+    letter-spacing: .2rem;
+    padding: 2rem 2rem;
+    background-image: url("background2.jpeg");
+     background-repeat: no-repeat;
+     background-size:cover;
+    height: 70vh;
+    width: 90vw;
+    z-index: 0 !important;
+    clip-path:polygon(78% 0, 100% 0, 100% 100%, 27% 100%);
+    
+    transition: all .5s linear;
+        display: flex;
+        align-items: right;
+        justify-content: center;
+        flex-direction: column;
+        text-align: right;
+    /* transition-delay:  .2s; */
+
+
+    
+
+}
+.btn-6{
+     position: absolute;
+     width: 5rem;
+     top:80%;
+     left:2.5%;
+}
+
+.btn-7 {
+    font-size: 1rem;
+    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    position: absolute;
+    width: 6rem;
+    top:70%;
+    right: 2%;
+}
+.btn-7 span {
+     background: rgb(0, 172, 238);
+     background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-7:before,
+.btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: blue;
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-7:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-7:hover {
+    color: blue;
+    background: transparent;
+}
+
+.btn-7:hover:before {
+    height: 100%;
+}
+
+.btn-7:hover:after {
+    width: 100%;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-7 span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn-7 span:hover:before {
+    height: 100%;
+}
+
+.btn-7 span:hover:after {
+    width: 100%;
+}
+
+
+
+h3{
+    /* position: absolute; */
+    top:10%
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+.right>a{
+    position: absolute;
+    width: 6rem;
+    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 50px;
+    top:60%;
+    right: 15%;
+}
+
+
+.right:hover {
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 13% 100%);
+
+}
+
+.left{  
+    background-image: url("background1.jpeg") ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+    background-color: red;
+    height: 70vh;
+    width: 90vw;
+    color: white;
+    letter-spacing: .2rem;
+    padding: 2rem 2rem;
+    /* clip-path: circle(40% at 0% 0%); */
+    clip-path:polygon(0 0, 79% 0, 36% 100%, 0 100%);
+    transition: all .5s linear;
+    /* transition-delay: .2s; */
+    z-index: 0 !important;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+     flex-direction: column;
+        text-align: left;
+}
+
+    button {
+        cursor: pointer;
+        background: white;
+        
+    }
+
+    button:hover > .left
+    {   
+        display: block;
+        background-color: red;
+        transform: translateY(0);
+    }
+    
+
+.left:hover{
+    clip-path: polygon(0 0, 89% 0, 89% 100%, 0 100%);
+      /* clip-path: circle(100% at 0% 0%); */
+    z-index:2;
+}
+
+
+
+.left:hover +.right{
+    background-color: yellow;
+    clip-path: polygon(87% 0, 100% 0, 100% 100%, 87% 100%);
+    /* clip-path: circle(50% at 100% 0%); */
+    /* clip-path: inset(0rem 0rem 0rem 70rem); */
+}
+
+.right:hover >.left{
+    background-color: yellow;
+     /* clip-path: circle(100% at 0% 0%); */
+    /* clip-path: inset(0rem 10rem 0rem 0rem); */
+}
+
+.outside{
+    /* display:none; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    transform: translateY(0px);
+    transition: all 1s;
+}
+
